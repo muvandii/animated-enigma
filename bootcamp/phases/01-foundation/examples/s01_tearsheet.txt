@@ -1,0 +1,98 @@
+==============================================================
+  THESIS — S01 MA(10/50) crossover on AAPL
+==============================================================
+  Trends in large-cap equities persist for weeks because of
+  slow capital flows (index rebalancing, fund allocations)
+  and because traders anchor to recent prices. A fast/slow
+  moving-average crossover is the cheapest possible way to
+  express 'be long when the short-term trend is up'.
+  Expectation: it captures the middle of big moves, gets
+  chopped in sideways markets, and should beat buy-and-hold
+  on a risk-adjusted basis by cutting exposure during
+  drawdowns -- IF the whipsaw cost is smaller than the
+  drawdown it avoids. That is the bet.
+
+==============================================
+         GROSS  (no costs)  MA 10/50          
+==============================================
+  periods              2520   (10.00 yrs)
+  total return        40.57%
+  CAGR                 3.46%
+  ann. vol            16.26%
+  Sharpe               0.21
+  Sortino              0.16
+  max drawdown       -31.31%
+  Calmar               0.11
+  hit rate            50.15%
+  turnover/day         0.03
+  best / worst day     5.13% /    -4.44%
+  trades                  69
+  total cost paid       0.00%
+  gross Sharpe          0.21
+  cost model         0+0 bps
+==============================================
+
+==============================================
+           NET (1+5 bps)  MA 10/50            
+==============================================
+  periods              2520   (10.00 yrs)
+  total return        34.87%
+  CAGR                 3.04%
+  ann. vol            16.26%
+  Sharpe               0.19
+  Sortino              0.14
+  max drawdown       -31.72%
+  Calmar               0.10
+  hit rate            48.81%
+  turnover/day         0.03
+  best / worst day     5.13% /    -4.44%
+  trades                  69
+  total cost paid       4.14%
+  gross Sharpe          0.21
+  cost model        1.0+5.0 bps
+==============================================
+
+==============================================
+            BENCHMARK  buy & hold             
+==============================================
+  periods              2520   (10.00 yrs)
+  total return       116.86%
+  CAGR                 8.05%
+  ann. vol            22.01%
+  Sharpe               0.37
+  Sortino              0.37
+  max drawdown       -41.94%
+  Calmar               0.19
+  hit rate            51.01%
+  turnover/day         0.00
+  best / worst day     5.74% /    -4.44%
+  trades                   1
+  total cost paid       0.06%
+  gross Sharpe          0.37
+  cost model        1.0+5.0 bps
+==============================================
+
+--------------------------------------------------------------
+  WALK-FORWARD  (5 folds, 60% train, 5-bar embargo)
+--------------------------------------------------------------
+ fold test_start   test_end  strat_sharpe  strat_cagr  bh_cagr  max_dd  trades
+    1 2021-01-15 2021-11-02         -1.74       -24.0    -16.5   -19.7       8
+    2 2021-11-03 2022-08-23          1.90        37.6     36.7    -7.5       3
+    3 2022-08-24 2023-06-13          0.18         3.2     21.9   -17.9       9
+    4 2023-06-14 2024-04-03         -0.52        -8.6     -2.4   -16.9       5
+    5 2024-04-04 2025-01-23          0.58         9.9     36.8   -24.2       7
+
+  folds where strategy beat buy & hold (CAGR): 1/5
+  mean out-of-sample Sharpe: +0.08   (in-sample net Sharpe: +0.19)
+
+==============================================================
+  VERDICT: KILL
+==============================================================
+  beats buy & hold net of costs : NO   (+3.0% vs +8.0% CAGR)
+  survives costs                : Sharpe +0.21 gross -> +0.19 net  (costs took 0.03 of Sharpe)
+  out-of-sample Sharpe          : +0.08 vs +0.19 in-sample
+  total cost paid                : 4.1% of capital over 69 trades
+
+  Rule: KILL means it goes in the graveyard with a failure note.
+        It does NOT mean you were wrong to build it. Week 1's job is
+        to produce a KILL with a reason, not a SHIP with a hope.

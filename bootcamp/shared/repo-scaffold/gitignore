@@ -1,0 +1,23 @@
+# never commit these
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# data is big and regenerable: fetch it, don't store it
+data/raw/
+data/clean/*.parquet
+
+# SECRETS. If you ever commit a key, rotate it immediately.
+.env
+*.key
+.secrets
+config/live-credentials.*
+# the live harness must NEVER see a real key in this repo
+live/credentials.*
+
+# outputs
+reports/*.png
+*.log

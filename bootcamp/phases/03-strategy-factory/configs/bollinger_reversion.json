@@ -1,0 +1,22 @@
+{
+  "start": "2015-01-01",
+  "periods": 2520,
+  "seed": 13,
+  "fee_bps": 1.0,
+  "slippage_bps": 5.0,
+  "borrow_bps": 50.0,
+  "name": "S04_bollinger_reversion",
+  "symbols": [
+    "AAPL",
+    "SPY",
+    "IWM"
+  ],
+  "lookahead_bars": 1,
+  "warmup_bars": 20,
+  "params": {
+    "window": 20,
+    "num_std": 2.0,
+    "exit_mode": "mid",
+    "hold_days": 5
+  }
+}
