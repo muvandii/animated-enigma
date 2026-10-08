@@ -1,0 +1,16 @@
+{
+  "broker": "sim",
+  "endpoint": "https://paper-api.alpaca.markets",
+  "symbols": ["SPY", "QQQ", "IWM", "TLT", "GLD"],
+  "strategy": "P01_combined_portfolio",
+  "capital": 10000.0,
+  "max_gross_leverage": 1.0,
+  "max_position_weight": 0.4,
+  "max_order_notional": 2000.0,
+  "min_order_notional": 25.0,
+  "max_daily_turnover": 0.25,
+  "kill_switch_drawdown": -0.15,
+  "dry_run": true,
+  "log_path": "live/orders.log",
+  "state_path": "live/state.json"
+}

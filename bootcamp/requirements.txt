@@ -1,0 +1,12 @@
+# Quant Trading Bootcamp -- minimal, free, no paid APIs.
+# Python >= 3.10
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+pyarrow>=12.0      # parquet storage for data/
+pytest>=7.4        # every gate is enforced by tests
+
+# OPTIONAL (not required to complete the course):
+# yfinance>=0.2.40        # only if stooq is blocked in your region
+# alpaca-py>=0.20         # Week 12 paper trading only
+# ccxt>=4.0               # Week 12 crypto paper/sandbox only

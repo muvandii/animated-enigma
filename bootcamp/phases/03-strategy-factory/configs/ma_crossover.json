@@ -1,0 +1,20 @@
+{
+  "start": "2015-01-01",
+  "periods": 2520,
+  "seed": 13,
+  "fee_bps": 1.0,
+  "slippage_bps": 5.0,
+  "borrow_bps": 50.0,
+  "name": "S01_ma_crossover",
+  "symbols": [
+    "AAPL"
+  ],
+  "lookahead_bars": 1,
+  "warmup_bars": 50,
+  "params": {
+    "fast": 10,
+    "slow": 50,
+    "trend_filter": null,
+    "allow_short": false
+  }
+}
